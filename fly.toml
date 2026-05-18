@@ -1,0 +1,14 @@
+# fly.toml app configuration file for shahab-mom-video-bot
+# This bot does outgoing Telegram polling only — no inbound HTTP needed.
+
+app = 'shahab-mom-video-bot'
+primary_region = 'sjc'
+
+[build]
+
+[processes]
+  app = 'python -u bot.py'
+
+[[vm]]
+  size = 'shared-cpu-1x'
+  memory = '256mb'
